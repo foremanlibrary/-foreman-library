@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foreman Library - Orie Dickson Favour</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#08152A;color:#F5EFE6;font-family:Georgia,serif;line-height:1.6}
+.header{padding:20px;text-align:center;border-bottom:2px solid #C9A86A}
+h1{color:#C9A86A;margin:15px 0 5px;font-size:28px}
+.tagline{color:#B8C5D6;font-style:italic}
+.hero img{width:100%;display:block}
+.hero{position:relative;max-width:800px;margin:0 auto}
+.hero-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(8,21,42,.9));padding:15px;text-align:center}
+.hero-overlay h2{color:#F5EFE6;font-size:28px;letter-spacing:3px}
+.container{max-width:900px;margin:0 auto;padding:20px}
+.card{background:#102040;border:1px solid #C9A86A33;border-radius:12px;padding:20px;margin:20px 0}
+.card h3{color:#C9A86A;margin-bottom:10px}
+.badge{display:inline-block;background:#C9A86A;color:#08152A;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:bold;margin:5px}
+.gold-card{background:#C9A86A;color:#08152A;border-radius:12px;padding:20px;margin:20px 0}
+.search{width:100%;padding:12px;border-radius:8px;border:1px solid #C9A86A;background:#08152A;color:#F5EFE6;margin:15px 0}
+.words{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+.word{background:#08152A;border:1px solid #C9A86A55;padding:10px;border-radius:8px;text-align:center;font-size:13px;color:#C9A86A}
+.word small{display:block;color:#B8C5D6;font-size:10px}
+.footer{text-align:center;padding:30px;border-top:1px solid #C9A86A33;color:#B8C5D6;font-size:12px}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>Foreman Library</h1>
+<div class="tagline">Building A Home That Heals, Holds, and Lasts<br>You are not your worst day.</div>
+</div>
+<div class="hero">
+<img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800" alt="Cabin">
+<div class="hero-overlay"><h2>HUMAN BRAINS</h2></div>
+</div>
+<div class="container">
+<div class="card">
+<h3>📖 HOME - Flagship Memoir</h3>
+<p><b>Building A Home That Heals, Holds, and Lasts</b><br>By Orie Dickson Favour (Foreman) - 2026<br><br>Dedication: For every home that is trying. Not perfect. Just trying.<br><br>10 Chapters: Home Is Not A House, Home Environment and Society, Home Constitution, Boundaries, Making People Respect Your Home, Strengthening Walls, Home Keeping, Heart of Home, Home That Heals, Home That Lasts.<br>Appendix: New Words, Strategies, Glossary, Tools</p>
+<span class="badge">10 Chapters</span><span class="badge">4 Appendices</span>
+</div>
+<div class="card">
+<h3>📘 Psychology Of Human Brains</h3>
+<p>A Closed Door, Open Window - 62 pages, 4 chapters<br>Mental health, forgiveness, healing, memory. Becoming safe inside yourself.</p>
+<span class="badge">62 Pages</span><span class="badge">Forgiveness</span>
+</div>
+<div class="gold-card">
+<h3>✨ WORD #37: MARAMETISM</h3>
+<p><b>/marametism/ - Foreman Original</b><br><br><b>Meaning:</b> Staying present, mastering measurements, doing things in measured intentional doses. Not overdoing, not underdoing - just enough with awareness.<br><br><b>Example:</b> "I felt marametism today - I worked measured, rested measured, loved measured."</p>
+</div>
+<div class="card">
+<h3>📚 Dictionary 1-173 V2.6</h3>
+<p>173 Words | 0 Vacancies | ©2026 Dickson Foreman</p>
+<input class="search" id="search" placeholder="Search marametism, allegi, socio" onkeyup="filterWords()">
+<div class="words" id="words">
+<div class="word">SOCIOAPATHY<small>#1</small></div>
+<div class="word">SPENDXIETY<small>#2</small></div>
+<div class="word">RELATIBLOCK<small>#3</small></div>
+<div class="word">GHOSTIQUETTE<small>#6</small></div>
+<div class="word">EGOTIQUETTE<small>#18</small></div>
+<div class="word">ANXIHOPE<small>#22</small></div>
+<div class="word">MARAMETISM<small>#37 GOLD</small></div>
+<div class="word">STAYRECT<small>#38</small></div>
+<div class="word">ALLEGISM<small>#63</small></div>
+<div class="word">ALLEGIGUILTIA<small>#61</small></div>
+<div class="word">ALLEGICALM<small>#66</small></div>
+<div class="word">ALLEGIBLOOM<small>#78</small></div>
+<div class="word">ALLEGILOVE<small>#79</small></div>
+<div class="word">BUILDORDER<small>#60</small></div>
+<div class="word">GHOSTPRAISE<small>#58</small></div>
+<div class="word">SEENSTORIA<small>#169</small></div>
+<div class="word">SELFRESQIA<small>#171</small></div>
+<div class="word">KNOWSTALLIA<small>#172</small></div>
+</div>
+</div>
+<div class="card">
+<h3>About</h3>
+<p>Orie Dickson Favour (Foreman)<br>Lagos, Nigeria<br>Author of HOME and Psychology Of Human Brains<br>Creator of 173 words including Marametism<br>Email: innodickfav058@gmail.com</p>
+</div>
+</div>
+<div class="footer">©2026 Foreman Publishing - Dickson Foreman<br>Official E-Shelf | 173 V2.6 | Next is 174</div>
+<script>
+function filterWords(){var q=document.getElementById('search').value.toUpperCase();var w=document.getElementsByClassName('word');for(var i=0;i<w.length;i++){var t=w[i].textContent;w[i].style.display=t.toUpperCase().indexOf(q)>-1?'':'none'}}
+</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foreman Library - Orie Dickson Favour</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#08152A;color:#F5EFE6;font-family:Georgia,serif;line-height:1.6}
+.header{padding:20px;text-align:center;border-bottom:2px solid #C9A86A}
+h1{color:#C9A86A;margin:15px 0 5px;font-size:28px}
+.tagline{color:#B8C5D6;font-style:italic}
+.hero img{width:100%;display:block}
+.hero{position:relative;max-width:800px;margin:0 auto}
+.hero-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(8,21,42,.9));padding:15px;text-align:center}
+.hero-overlay h2{color:#F5EFE6;font-size:28px;letter-spacing:3px}
+.container{max-width:900px;margin:0 auto;padding:20px}
+.card{background:#102040;border:1px solid #C9A86A33;border-radius:12px;padding:20px;margin:20px 0}
+.card h3{color:#C9A86A;margin-bottom:10px}
+.badge{display:inline-block;background:#C9A86A;color:#08152A;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:bold;margin:5px}
+.gold-card{background:#C9A86A;color:#08152A;border-radius:12px;padding:20px;margin:20px 0}
+.search{width:100%;padding:12px;border-radius:8px;border:1px solid #C9A86A;background:#08152A;color:#F5EFE6;margin:15px 0}
+.words{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+.word{background:#08152A;border:1px solid #C9A86A55;padding:10px;border-radius:8px;text-align:center;font-size:13px;color:#C9A86A}
+.word small{display:block;color:#B8C5D6;font-size:10px}
+.footer{text-align:center;padding:30px;border-top:1px solid #C9A86A33;color:#B8C5D6;font-size:12px}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>Foreman Library</h1>
+<div class="tagline">Building A Home That Heals, Holds, and Lasts<br>You are not your worst day.</div>
+</div>
+<div class="hero">
+<img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800" alt="Cabin">
+<div class="hero-overlay"><h2>HUMAN BRAINS</h2></div>
+</div>
+<div class="container">
+<div class="card">
+<h3>📖 HOME - Flagship Memoir</h3>
+<p><b>Building A Home That Heals, Holds, and Lasts</b><br>By Orie Dickson Favour (Foreman) - 2026<br><br>Dedication: For every home that is trying. Not perfect. Just trying.<br><br>10 Chapters: Home Is Not A House, Home Environment and Society, Home Constitution, Boundaries, Making People Respect Your Home, Strengthening Walls, Home Keeping, Heart of Home, Home That Heals, Home That Lasts.<br>Appendix: New Words, Strategies, Glossary, Tools</p>
+<span class="badge">10 Chapters</span><span class="badge">4 Appendices</span>
+</div>
+<div class="card">
+<h3>📘 Psychology Of Human Brains</h3>
+<p>A Closed Door, Open Window - 62 pages, 4 chapters<br>Mental health, forgiveness, healing, memory. Becoming safe inside yourself.</p>
+<span class="badge">62 Pages</span><span class="badge">Forgiveness</span>
+</div>
+<div class="gold-card">
+<h3>✨ WORD #37: MARAMETISM</h3>
+<p><b>/marametism/ - Foreman Original</b><br><br><b>Meaning:</b> Staying present, mastering measurements, doing things in measured intentional doses. Not overdoing, not underdoing - just enough with awareness.<br><br><b>Example:</b> "I felt marametism today - I worked measured, rested measured, loved measured."</p>
+</div>
+<div class="card">
+<h3>📚 Dictionary 1-173 V2.6</h3>
+<p>173 Words | 0 Vacancies | ©2026 Dickson Foreman</p>
+<input class="search" id="search" placeholder="Search marametism, allegi, socio" onkeyup="filterWords()">
+<div class="words" id="words">
+<div class="word">SOCIOAPATHY<small>#1</small></div>
+<div class="word">SPENDXIETY<small>#2</small></div>
+<div class="word">RELATIBLOCK<small>#3</small></div>
+<div class="word">GHOSTIQUETTE<small>#6</small></div>
+<div class="word">EGOTIQUETTE<small>#18</small></div>
+<div class="word">ANXIHOPE<small>#22</small></div>
+<div class="word">MARAMETISM<small>#37 GOLD</small></div>
+<div class="word">STAYRECT<small>#38</small></div>
+<div class="word">ALLEGISM<small>#63</small></div>
+<div class="word">ALLEGIGUILTIA<small>#61</small></div>
+<div class="word">ALLEGICALM<small>#66</small></div>
+<div class="word">ALLEGIBLOOM<small>#78</small></div>
+<div class="word">ALLEGILOVE<small>#79</small></div>
+<div class="word">BUILDORDER<small>#60</small></div>
+<div class="word">GHOSTPRAISE<small>#58</small></div>
+<div class="word">SEENSTORIA<small>#169</small></div>
+<div class="word">SELFRESQIA<small>#171</small></div>
+<div class="word">KNOWSTALLIA<small>#172</small></div>
+</div>
+</div>
+<div class="card">
+<h3>About</h3>
+<p>Orie Dickson Favour (Foreman)<br>Lagos, Nigeria<br>Author of HOME and Psychology Of Human Brains<br>Creator of 173 words including Marametism<br>Email: innodickfav058@gmail.com</p>
+</div>
+</div>
+<div class="footer">©2026 Foreman Publishing - Dickson Foreman<br>Official E-Shelf | 173 V2.6 | Next is 174</div>
+<script>
+function filterWords(){var q=document.getElementById('search').value.toUpperCase();var w=document.getElementsByClassName('word');for(var i=0;i<w.length;i++){var t=w[i].textContent;w[i].style.display=t.toUpperCase().indexOf(q)>-1?'':'none'}}
+</script>
+</body>
+</html>
